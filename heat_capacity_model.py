@@ -128,7 +128,7 @@ if Td1p + Td2p + Td3p + Te1p + Te2p + Te3p != 1:
 data = pd.read_csv(data_location, header=None)
 
 
-"""plotting"""
+"""setting up plots and calculations"""
 
 xaxis = []
 
@@ -156,7 +156,7 @@ totaly = list(map(sum,all_ys))
 data_dict = {"T":temps, "Total":totaly}
 
 
-#I'm a bit embarrassed by the code in this section, but hey, it works
+"""Generate Seperate Plots"""
 
 
 for i, ys in enumerate(debye_ys):
@@ -234,6 +234,7 @@ if Data_view == 3:
     plt.ylabel("C$_p$/T (Jmol$^{-1}$K$^{-2}$)")
     plt.legend()
 
+"""Generate Combigned Plots"""
     
 if Data_view == 4:
     fig, axs = plt.subplots(2,2)
